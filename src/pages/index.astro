@@ -1,19 +1,11 @@
 ---
+//component import
 import MainLayout from "../layouts/MainLayout.astro";
 
-const isRed = true;
+//style import
+import "../styles/global.css";
 ---
 
 <MainLayout title="My Blog">
   <p>hi from <span>Home</span></p>
-  <p class:list={["big", { red: isRed }]}>hi from <span>Home</span></p>
 </MainLayout>
-
-<style>
-  .big {
-    font-size: 4rem;
-  }
-  .red {
-    color: red;
-  }
-</style>
