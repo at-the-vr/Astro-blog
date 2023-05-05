@@ -1,0 +1,19 @@
+---
+//component import
+import MainHead from "./MainHead.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title = "Default Title", description = "Default Description" } =
+  Astro.props as Props;
+---
+
+<html lang="en">
+  <MainHead title={title} description={description} />
+  <body>
+    <slot>Default Text</slot>
+    <!-- <slot name="hi">Default Text</slot> -->
+  </body>
+</html>
