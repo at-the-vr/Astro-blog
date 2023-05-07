@@ -13,6 +13,7 @@ interface Props {
   isFilled?: boolean;
   borderVisible?: boolean;
   classes?: string;
+  isTargetBlank?: boolean;
 }
 
 const {
@@ -23,11 +24,13 @@ const {
   isFilled = true,
   borderVisible = false,
   classes,
+  isTargetBlank,
   ...rest
 } = Astro.props as Props;
 ---
 
 <a
+  target={isTargetBlank ? "_blank" : "_self"}
   href={href}
   class:list={[
     "link",
