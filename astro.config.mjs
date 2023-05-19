@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-blog-pita.app",
+  site: "https://astro-blog-pita.netlify.app",
   integrations: [
     image({
       serviceEntryPoint: "@astrojs/image/sharp",
