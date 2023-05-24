@@ -128,17 +128,21 @@ h6 {
   --transition-squish-fast: var(--_tspeed_fast) var(--_ttiming_squish);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bkg: var(--bkg--dark);
-    --txt: var(--txt--dark);
-    --accent: var(--accent--dark);
-    --muted: var(--muted--dark);
-    color-scheme: dark;
-    --_shadow-strength: 0.75;
-    --_shadow-saturation: 75%;
-    --_shadow-lightness: 6%;
-  }
+[color-scheme="dark"] {
+  --bkg: var(--bkg--dark);
+  --txt: var(--txt--dark);
+  --accent: var(--accent--dark);
+  --muted: var(--muted--dark);
+  --_shadow-strength: 0.75;
+  --_shadow-saturation: 75%;
+  --_shadow-lightness: 6%;
+}
+
+[color-scheme="light"] {
+  --bkg: var(--bkg--light);
+  --txt: var(--txt--light);
+  --accent: var(--accent--light);
+  --muted: var(--muted--light);
 }
 
 /* prefers reduced motion */
